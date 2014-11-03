@@ -1,6 +1,22 @@
 (ns packman.hero)
 
+(def lines [
+    "  @@@@ "
+    " @@@@@@"
+    "@@@@@ @@"
+    "@@@@@@@@@"
+    "@@@@@@@"
+    " @@@@"
+    " @@@@@@"
+    "  @@@@@@"
+  ])
+
 (defn draw
   "TODO: description"
   [x, y, dir]
-  (println 0))
+  (doseq
+    [line lines]
+    (dotimes [i x]
+      (print "  "))
+    (println line))
+  )
